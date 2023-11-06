@@ -913,8 +913,8 @@
       }
     },
     "src/LeoToken.sol": {
-      "lastModificationDate": 1699282295173,
-      "contentHash": "32d16d36b9074a3586a1ff62a39a50d1",
+      "lastModificationDate": 1699297067062,
+      "contentHash": "f02d233076f99ae9077986cf603d71ba",
       "sourceName": "src/LeoToken.sol",
       "solcConfig": {
         "settings": {
